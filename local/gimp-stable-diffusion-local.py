@@ -2,7 +2,12 @@
 
 # v1.1.0
 
-import urllib2
+try:
+    # Python 2
+    import urllib2
+except ImportError:
+    # Python 3
+    import urllib.request as urllib2
 import tempfile
 import os
 import base64
